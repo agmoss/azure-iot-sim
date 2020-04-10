@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  iot:
+    image: m0sscr.azurecr.io/iotsimulation:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile

@@ -1,0 +1,43 @@
+{
+  "name": "azure-iot-sim",
+  "version": "1.0.0",
+  "description": "Simulated devices on azure iot hub",
+  "main": "index.js",
+  "module": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agmoss/azure-iot-sim.git"
+  },
+  "scripts": {
+    "start": "node -r esm main.js",
+    "lint": "eslint --fix --ext .js .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "register device": "az iot hub device-identity create --hub-name YourIoTHubName --device-id MyNodeDevice",
+    "show device connection": "az iot hub device-identity show-connection-string --hub-name YourIoTHubName --device-id MyNodeDevice --output table",
+    "show service connection": "az iot hub device-identity show-connection-string --hub-name YourIoTHubName --device-id MyNodeDevice --output table"
+  },
+  "author": "Andrew Moss <andrew@m0ss.dev> (https://m0ss.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agmoss/azure-iot-sim/issues"
+  },
+  "homepage": "https://github.com/agmoss/azure-iot-sim#readme",
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "iot-sim": "^1.0.0",
+    "azure-iot-device": "^1.12.0",
+    "@azure/event-hubs": "^2.1.3",
+    "azure-iot-device-mqtt": "^1.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
