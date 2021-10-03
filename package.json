@@ -8,9 +8,16 @@
     "type": "git",
     "url": "git+https://github.com/agmoss/azure-iot-sim.git"
   },
+  "keywords": [
+    "IoT",
+    "simulation",
+    "device",
+    "facility"
+  ],
   "scripts": {
     "start": "node -r esm main.js",
     "lint": "eslint --fix --ext .js .",
+    "format": "prettier --write \"*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "register device": "az iot hub device-identity create --hub-name YourIoTHubName --device-id MyNodeDevice",
     "show device connection": "az iot hub device-identity show-connection-string --hub-name YourIoTHubName --device-id MyNodeDevice --output table",
@@ -34,10 +41,12 @@
   },
   "devDependencies": {
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.19.1"
   }
 }
