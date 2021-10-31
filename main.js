@@ -78,7 +78,7 @@ const facility_01 = new Facility({
         lat: 51.0447,
         lon: 114.0719,
     },
-    frequency: 120000,
+    frequency: 300000,
 });
 
 facility_01.setupFacility();
@@ -90,7 +90,7 @@ const facility_02 = new Facility({
     name: "facility_02",
     devices: [energy_iot_02, wind_iot_02, tank_iot_02],
     geolocation: { lat: 53.5461, lon: 113.4938 },
-    frequency: 120000,
+    frequency: 300000,
 });
 
 facility_02.setupFacility();
